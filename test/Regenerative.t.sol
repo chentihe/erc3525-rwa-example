@@ -80,7 +80,7 @@ contract RegenerativeTest is Test {
         erc20.approve(address(logic), UINT256_MAX);
         logic.createSlot("Real Estate", "Mock RWA", 50 * 1e6);
         vm.expectRevert(IRLogic.UnderMinimumValue.selector);
-        logic.mint(0.1 * 1e6);
+        logic.mint(0.1 * 1e5);
         vm.stopPrank();
     }
 
